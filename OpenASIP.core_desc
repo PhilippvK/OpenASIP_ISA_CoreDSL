@@ -105,7 +105,7 @@ InstructionSet XISE extends RISCVBase {
       behavior: {
         // TODO: try with inlining or intrinsic detection
         if (rd != 0) {
-          X[rd] = rotr32(X[rs1], 7) ^ rotr32(X[rs1], 18) ^ (X[rs1] >> 3)
+          X[rd] = rotr32(X[rs1], 7) ^ rotr32(X[rs1], 18) ^ (X[rs1] >> 3);
         }
       }
     }
@@ -115,7 +115,7 @@ InstructionSet XISE extends RISCVBase {
       assembly: {"oa.sha256sig1", "{name(rd)}, {name(rs1)}"};
       behavior: {
         if (rd != 0) {
-          X[rd] = rotr32(X[rs1], 17) ^ rotr32(X[rs1], 19) ^ (X[rs1] >> 10)
+          X[rd] = rotr32(X[rs1], 17) ^ rotr32(X[rs1], 19) ^ (X[rs1] >> 10);
         }
       }
     }
@@ -125,7 +125,7 @@ InstructionSet XISE extends RISCVBase {
       assembly: {"oa.sha256sum0", "{name(rd)}, {name(rs1)}"};
       behavior: {
         if (rd != 0) {
-          X[rd] = rotr32(X[rs1], 2) ^ rotr32(X[rs1], 13) ^ rotr32(X[rs1], 22)
+          X[rd] = rotr32(X[rs1], 2) ^ rotr32(X[rs1], 13) ^ rotr32(X[rs1], 22);
         }
       }
     }
@@ -135,7 +135,7 @@ InstructionSet XISE extends RISCVBase {
       assembly: {"oa.sha256sum1", "{name(rd)}, {name(rs1)}"};
       behavior: {
         if (rd != 0) {
-          X[rd] = rotr32(X[rs1], 6) ^ rotr32(X[rs1], 11) ^ rotr32(X[rs1], 25)
+          X[rd] = rotr32(X[rs1], 6) ^ rotr32(X[rs1], 11) ^ rotr32(X[rs1], 25);
         }
       }
     }
@@ -146,7 +146,7 @@ InstructionSet XISE extends RISCVBase {
       behavior: {
         // TODO: try with inlining or intrinsic detection
         if (rd != 0) {
-          X[rd] = rotl32(X[rs1], 25) ^ rotl32(X[rs1], 14) ^ (X[rs1] >> 3)
+          X[rd] = rotl32(X[rs1], 25) ^ rotl32(X[rs1], 14) ^ (X[rs1] >> 3);
         }
       }
     }
@@ -156,7 +156,7 @@ InstructionSet XISE extends RISCVBase {
       assembly: {"oa.sha256sig1b", "{name(rd)}, {name(rs1)}"};
       behavior: {
         if (rd != 0) {
-          X[rd] = rotl32(X[rs1], 15) ^ rotl32(X[rs1], 13) ^ (X[rs1] >> 10)
+          X[rd] = rotl32(X[rs1], 15) ^ rotl32(X[rs1], 13) ^ (X[rs1] >> 10);
         }
       }
     }
@@ -166,7 +166,7 @@ InstructionSet XISE extends RISCVBase {
       assembly: {"oa.sha256sum0b", "{name(rd)}, {name(rs1)}"};
       behavior: {
         if (rd != 0) {
-          X[rd] = rotl32(X[rs1], 30) ^ rotl32(X[rs1], 19) ^ rotl32(X[rs1], 10)
+          X[rd] = rotl32(X[rs1], 30) ^ rotl32(X[rs1], 19) ^ rotl32(X[rs1], 10);
         }
       }
     }
@@ -176,7 +176,7 @@ InstructionSet XISE extends RISCVBase {
       assembly: {"oa.sha256sum1b", "{name(rd)}, {name(rs1)}"};
       behavior: {
         if (rd != 0) {
-          X[rd] = rotl32(X[rs1], 26) ^ rotl32(X[rs1], 21) ^ rotl32(X[rs1], 7)
+          X[rd] = rotl32(X[rs1], 26) ^ rotl32(X[rs1], 21) ^ rotl32(X[rs1], 7);
         }
       }
     }
