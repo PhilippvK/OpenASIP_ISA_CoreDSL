@@ -3,18 +3,15 @@ import "../rv_base/RV32I.core_desc"
 InstructionSet OpenASIP_base extends RV32I {
     functions{
         // Returns the minimum of two signed integers.
-        signed<32> min(signed<32> a, signed<32> b) {
+        signed<32> min(signed<32> a, signed<32> b) [[inline]] {
             return (a < b) ? a : b;
         }
         // Returns the remainder of two signed integers.
-        signed<32> remainder(signed<32> a, signed<32> b) {
-            signed<32> temp = a % b;
-            if ((temp < 0 && b > 0) || (temp > 0 && b < 0)) {
-                temp += b;
-            }
-            return temp;
+        signed<32> remainder(signed<32> a, signed<32> b) [[inline]] {
+            // return (((a % b) < 0 && b > 0) || ((a % b) > 0 && b < 0)) ? ((a % b) +  b) : (a % b);
+            return a % b;
         }
-        signed<32> BWIDTH(signed<32> a) {
+        signed<32> BWIDTH(signed<32> a) [[inline]] {
             return 32;
         }
     }
@@ -405,7 +402,7 @@ InstructionSet OpenASIP_base extends RV32I {
 
                     signed<32> in1 = (signed<32>)(X[rs1 % RFS]);
                     signed<32> in2 = (signed<32>)(X[rs2 % RFS]);
-                    signed<32> out1 = remainder(in1,in2);
+                    signed<32> out1 = remainder(in1, in2);
                     X[rd % RFS] = (signed<32>)(out1);
                 // }
             }
