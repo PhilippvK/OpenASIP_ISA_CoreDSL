@@ -1,6 +1,6 @@
 import "../rv_base/RV32I.core_desc"
 
-InstructionSet XISE extends RV32I {
+InstructionSet OpenASIP_paper extends RV32I {
   // functions {
   //     unsigned<32> rotl32(unsigned<32> x, unsigned<32> n) {
   //         return (x << n) | (x >> (32 - n))
