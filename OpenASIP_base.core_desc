@@ -451,9 +451,9 @@ InstructionSet OpenASIP_base extends RV32I {
         //         int foundBits = 0;
         //         unsigned<32> word = X[rs1 % RFS];
         //         const unsigned<32> bitToSearch = X[rs2 % RFS];
-        //         if (bitToSearch <= 1) {
+        //         // if (bitToSearch <= 1) {
         //         const int BITS_IN_WORD = 4*8;
-        //         for (; foundBits <= BITS_IN_WORD; ++foundBits) {
+        //         for (; foundBits <= BITS_IN_WORD; foundBits += 1) {
         //             // check the top bit: is the searched bit?
         //             if (word >> (BITS_IN_WORD - 1) == bitToSearch)
         //                 break; // found the bit
