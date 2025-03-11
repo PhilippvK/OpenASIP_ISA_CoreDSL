@@ -1,4 +1,4 @@
-import "../rv_base/RV32I.core_desc"
+import "../../common/cdsl/rv_base/RV32I.core_desc"
 
 InstructionSet OpenASIP_paper extends RV32I {
   // functions {
