@@ -14,7 +14,7 @@ InstructionSet OpenASIP_paper extends RV32I {
   instructions {
     AES283XOR {
       // opcode: custom-0
-      encoding: 7'b0000000 :: 5'b00000 :: rs1[4:0] :: 3'b000 :: rd[4:0] :: 7'b0001011;
+      encoding: 7'b0000000 :: 5'b00000 :: rs1[4:0] :: 3'b000 :: rd[4:0] :: 7'b0101011;
       assembly: {"oa.aes283xor", "{name(rd)}, {name(rs1)}"};
       behavior: {
         if (rd != 0) {
@@ -26,7 +26,7 @@ InstructionSet OpenASIP_paper extends RV32I {
     }
     AES283XORB {
       // opcode: custom-0
-      encoding: 7'b0000001 :: 5'b00000 :: rs1[4:0] :: 3'b000 :: rd[4:0] :: 7'b0001011;
+      encoding: 7'b0000001 :: 5'b00000 :: rs1[4:0] :: 3'b000 :: rd[4:0] :: 7'b0101011;
       assembly: {"oa.aes283xorb", "{name(rd)}, {name(rs1)}"};
       behavior: {
         if (rd != 0) {
@@ -38,7 +38,7 @@ InstructionSet OpenASIP_paper extends RV32I {
     }
     // REFLECT8 {
     //   // opcode: custom-0
-    //   encoding: 7'b0000010 :: 5'b00000 :: rs1[4:0] :: 3'b000 :: rd[4:0] :: 7'b0001011;
+    //   encoding: 7'b0000010 :: 5'b00000 :: rs1[4:0] :: 3'b000 :: rd[4:0] :: 7'b0101011;
     //   assembly: {"oa.reflect8", "{name(rd)}, {name(rs1)}"};
     //   behavior: {
     //     if (rd != 0) {
@@ -59,7 +59,7 @@ InstructionSet OpenASIP_paper extends RV32I {
     // }
     // REFLECT32 {
     //   // opcode: custom-0
-    //   encoding: 7'b0000011 :: 5'b00000 :: rs1[4:0] :: 3'b000 :: rd[4:0] :: 7'b0001011;
+    //   encoding: 7'b0000011 :: 5'b00000 :: rs1[4:0] :: 3'b000 :: rd[4:0] :: 7'b0101011;
     //   assembly: {"oa.reflect32", "{name(rd)}, {name(rs1)}"};
     //   behavior: {
     //     if (rd != 0) {
@@ -102,7 +102,7 @@ InstructionSet OpenASIP_paper extends RV32I {
     // }
     SHA256SIG0 {
       // opcode: custom-0
-      encoding: 7'b0000100 :: 5'b00000 :: rs1[4:0] :: 3'b000 :: rd[4:0] :: 7'b0001011;
+      encoding: 7'b0000100 :: 5'b00000 :: rs1[4:0] :: 3'b000 :: rd[4:0] :: 7'b0101011;
       assembly: {"oa.sha256sig0", "{name(rd)}, {name(rs1)}"};
       behavior: {
         // TODO: try with inlining or intrinsic detection
@@ -114,7 +114,7 @@ InstructionSet OpenASIP_paper extends RV32I {
     }
     SHA256SIG1 {
       // opcode: custom-0
-      encoding: 7'b0000101 :: 5'b00000 :: rs1[4:0] :: 3'b000 :: rd[4:0] :: 7'b0001011;
+      encoding: 7'b0000101 :: 5'b00000 :: rs1[4:0] :: 3'b000 :: rd[4:0] :: 7'b0101011;
       assembly: {"oa.sha256sig1", "{name(rd)}, {name(rs1)}"};
       behavior: {
         if (rd != 0) {
@@ -125,7 +125,7 @@ InstructionSet OpenASIP_paper extends RV32I {
     }
     SHA256SUM0 {
       // opcode: custom-0
-      encoding: 7'b0000110 :: 5'b00000 :: rs1[4:0] :: 3'b000 :: rd[4:0] :: 7'b0001011;
+      encoding: 7'b0000110 :: 5'b00000 :: rs1[4:0] :: 3'b000 :: rd[4:0] :: 7'b0101011;
       assembly: {"oa.sha256sum0", "{name(rd)}, {name(rs1)}"};
       behavior: {
         if (rd != 0) {
@@ -136,7 +136,7 @@ InstructionSet OpenASIP_paper extends RV32I {
     }
     SHA256SUM1 {
       // opcode: custom-0
-      encoding: 7'b0000111 :: 5'b00000 :: rs1[4:0] :: 3'b000 :: rd[4:0] :: 7'b0001011;
+      encoding: 7'b0000111 :: 5'b00000 :: rs1[4:0] :: 3'b000 :: rd[4:0] :: 7'b0101011;
       assembly: {"oa.sha256sum1", "{name(rd)}, {name(rs1)}"};
       behavior: {
         if (rd != 0) {
@@ -147,7 +147,7 @@ InstructionSet OpenASIP_paper extends RV32I {
     }
     SHA256SIG0B {
       // opcode: custom-0
-      encoding: 7'b0001000 :: 5'b00000 :: rs1[4:0] :: 3'b000 :: rd[4:0] :: 7'b0001011;
+      encoding: 7'b0001000 :: 5'b00000 :: rs1[4:0] :: 3'b000 :: rd[4:0] :: 7'b0101011;
       assembly: {"oa.sha256sig0b", "{name(rd)}, {name(rs1)}"};
       behavior: {
         // TODO: try with inlining or intrinsic detection
@@ -159,7 +159,7 @@ InstructionSet OpenASIP_paper extends RV32I {
     }
     SHA256SIG1B {
       // opcode: custom-0
-      encoding: 7'b0001001 :: 5'b00000 :: rs1[4:0] :: 3'b000 :: rd[4:0] :: 7'b0001011;
+      encoding: 7'b0001001 :: 5'b00000 :: rs1[4:0] :: 3'b000 :: rd[4:0] :: 7'b0101011;
       assembly: {"oa.sha256sig1b", "{name(rd)}, {name(rs1)}"};
       behavior: {
         if (rd != 0) {
@@ -181,7 +181,7 @@ InstructionSet OpenASIP_paper extends RV32I {
     }
     SHA256SUM1B {
       // opcode: custom-0
-      encoding: 7'b0001011 :: 5'b00000 :: rs1[4:0] :: 3'b000 :: rd[4:0] :: 7'b0001011;
+      encoding: 7'b0001011 :: 5'b00000 :: rs1[4:0] :: 3'b000 :: rd[4:0] :: 7'b0101011;
       assembly: {"oa.sha256sum1b", "{name(rd)}, {name(rs1)}"};
       behavior: {
         if (rd != 0) {
@@ -192,7 +192,7 @@ InstructionSet OpenASIP_paper extends RV32I {
     }
     ROTL32 {
       // opcode: custom-0
-      encoding: 7'b0010000 :: rs2[4:0] :: rs1[4:0] :: 3'b000 :: rd[4:0] :: 7'b0001011;
+      encoding: 7'b0010000 :: rs2[4:0] :: rs1[4:0] :: 3'b000 :: rd[4:0] :: 7'b0101011;
       assembly: {"oa.rotl32", "{name(rd)}, {name(rs1)}, {name(rs2)}"};
       behavior: {
         if (rd != 0) {
@@ -203,7 +203,7 @@ InstructionSet OpenASIP_paper extends RV32I {
     }
     ROTR32 {
       // opcode: custom-0
-      encoding: 7'b0010001 :: rs2[4:0] :: rs1[4:0] :: 3'b000 :: rd[4:0] :: 7'b0001011;
+      encoding: 7'b0010001 :: rs2[4:0] :: rs1[4:0] :: 3'b000 :: rd[4:0] :: 7'b0101011;
       assembly: {"oa.rotr32", "{name(rd)}, {name(rs1)}, {name(rs2)}"};
       behavior: {
         if (rd != 0) {
